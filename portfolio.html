@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="RC">
+
+    <title>Ruichen Meng</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link href="assets/css/et-line-font.css" rel="stylesheet">-->
+    <link href="assets/css/vertical.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body ng-app="RC" ng-controller="PoCtrl">
+
+<!-- PRELOADER -->
+<div class="page-overlay"></div>
+<div class="page-loader page-loader-portfolio">
+
+    <div class="loader">Loading...</div>
+</div>
+<!-- /PRELOADER -->
+
+<!-- WRAPPER -->
+<div class="wrapper">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
+
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="index.html">
+                    <!-- IMAGE OR TEXT -->
+                    <img class="dark-logo" src="assets/images/logoRdark.png" width="25" alt="">
+                    <img class="light-logo" src="assets/images/logoR.png" width="25" alt="">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="custom-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="index.html" class="section-scroll">Turn back home</a></li>
+                    <li><a href="#intro" class="section-scroll">Introduction</a></li>
+                    <li><a href="#case" class="section-scroll">Case study</a></li>
+                    <li><a href="#relate" class="section-scroll">Related projects</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- /NAVIGATION -->
+
+
+    <!-- HERO -->
+    <section class="module module-parallax bg-dark-60"
+             data-background="assets/images/portfolio-single/{{portfolio.titleLower}}/bg.jpg">
+
+        <!-- HERO TEXT -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="mh-line-size-2 font-alt m-b-10">{{title}}</h1>
+                    <h5 class="mh-line-size-5 font-alt m-b-50">{{portfolio.simpleDes}}</h5>
+                    <div class="btn btn-red" ng-if="!portfolio.finished"> ( To be finished )</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-info">
+            <div class="container ">
+
+                <div class="row">
+
+                    <div class="col-sm-6 col-md-4 ">
+                        <span class="portfolio-info-type">Role </span>
+                        <span id="portfolio-text-rolo">{{portfolio.role}}</span>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 ">
+                        <span class="portfolio-info-type">Period </span>
+                        <span id="portfolio-text-period">{{portfolio.time}}</span>
+                    </div>
+
+                    <div class="col-sm-12 col-md-4 ">
+                        <span class="portfolio-info-type">Type </span>
+                        <span id="portfolio-text-type">{{portfolio.team}}</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- /HERO TEXT -->
+
+    </section>
+    <!-- /HERO -->
+
+
+    <!-- ABOUT -->
+    <section id="intro" class="module" ng-if="portfolio.simpleDes">
+
+        <div class="container">
+
+            <!-- MODULE TITLE -->
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Introduction</h2>
+
+                </div>
+            </div>
+            <!-- /MODULE TITLE -->
+
+
+            <!-- IMAGE WITH CAPTION -->
+            <div class="image-caption">
+                <div class="caption-text introPic-{{portfolio.theme}}">
+
+                    <h5 class="font-alt">{{title}}</h5>
+                    <p class="font-serif">{{portfolio.simpleDes}} | {{portfolio.time}} | {{portfolio.team}}</p>
+                </div>
+                <img ng-src="assets/images/portfolio-single/{{portfolio.titleLower}}/1.jpg" alt="">
+            </div>
+            <!-- /IMAGE WITH CAPTION -->
+
+
+            <!-- PROJECT DETAILS -->
+            <div class="row m-t-70">
+
+                <div class="col-md-12" ng-if="!portfolio.goal&&!portfolio.concept">
+                    <h5 class="font-alt m-t-0">Brief</h5>
+                    <p>{{portfolio.brief}}</p>
+                </div>
+
+                <div class="col-md-12" ng-if="portfolio.concept">
+
+                    <div class="row multi-columns-row">
+
+                        <div class="col-sm-6 col-md-6 ">
+                            <h5 class="font-alt m-t-0">Brief</h5>
+                            <p ng-bind-html="portfolio.brief"></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 ">
+                            <h5 class="font-alt m-t-0">Concept</h5>
+                            <p ng-bind-html="portfolio.concept"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12" ng-if="portfolio.goal">
+
+                    <div class="row multi-columns-row">
+
+                        <div class="col-sm-6 col-md-4 ">
+                            <h5 class="font-alt m-t-0">Brief</h5>
+                            <p>{{portfolio.brief}}</p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 ">
+                            <h5 class="font-alt m-t-0">Goal</h5>
+                            <p>{{portfolio.goal}}</p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4 ">
+                            <h5 class="font-alt m-t-0">Plan</h5>
+                            <p>{{portfolio.plan}}</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-12" ng-if="portfolio.preview">
+                    <div class="row m-t-20 m-b-20">
+                        <a class="absolute-center btn btn-red btn-b" href="{{portfolio.preview}}" target="_blank"> Visit
+                            website
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /PROJECT DETAILS -->
+
+        </div>
+
+    </section>
+    <!-- /ABOUT -->
+
+    <hr class="divider"><!-- DIVIDER -->
+
+
+    <!-- PORTFOLIO -->
+    <section id="case" class="module" ng-if="portfolio.pics[0] || portfolio.video">
+
+        <div class="container" ng-if="portfolio.pics[0]">
+            <!-- MODULE TITLE -->
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Case study</h2>
+                </div>
+            </div>
+            <!-- /MODULE TITLE -->
+            <!-- PORTFOLIO CONTENT -->
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <!-- IMAGE WITH CAPTION -->
+                    <!--ng-class="portfolio.picsMaxHeight ? 'max-height-img-{{portfolio.picsMaxHeight}}':''"-->
+                    <div class="image-caption" ng-repeat="picId in portfolio.pics">
+                        <img ng-style="portfolio.picsStyle"
+                             data-action="zoom"
+                             ng-src="assets/images/portfolio-single/{{portfolio.titleLower}}/{{picId}}.jpg" alt="">
+                    </div>
+                    <!-- /IMAGE WITH CAPTION -->
+                </div>
+            </div>
+            <!-- /PORTFOLIO CONTENT -->
+        </div>
+
+
+        <div class="container" ng-if="portfolio.video">
+            <!-- MODULE TITLE -->
+            <div class="row">
+                <div class="project-video">
+                    <h2 class="module-title font-alt">Demo video</h2>
+
+                    <iframe class="project-video-frame" ng-src="{{portfolio.video}}"
+                            width="{{portfolio.videoWidth}}" height="{{portfolio.videoHeight}}" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- /PORTFOLIO -->
+
+    <hr class="divider"><!-- DIVIDER -->
+
+    <!-- RELATED PROJECT -->
+    <section id="relate" class="module">
+
+        <div class="container">
+
+            <!-- MODULE TITLE -->
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Related Projects</h2>
+                </div>
+            </div>
+            <!-- /MODULE TITLE -->
+
+            <!-- WORKS GRID -->
+            <div class="row">
+
+                <div id="works-grid" class="works-grid works-hover-g">
+
+                    <!-- DO NOT DELETE THIS DIV -->
+                    <div class="grid-sizer"></div>
+
+                    <!-- PORTFOLIO ITEM -->
+                    <div class="work-item design" ng-repeat="projectId in portfolio.relatedProjects track by $index">
+                        <a href="portfolio.html?project={{portfolios[projectId].title}}">
+                            <img ng-src="assets/images/portfolio/{{portfolios[projectId].titleLower}}.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">{{portfolios[projectId].title}}</h3>
+                                <div class="work-descr">
+                                    {{portfolios[projectId].simpleDes}}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /PORTFOLIO ITEM -->
+
+                </div>
+
+            </div>
+            <!-- /WORKS GRID -->
+
+        </div>
+
+    </section>
+    <!-- /RELATED PROJECT -->
+
+
+    <!-- FOOTER -->
+    <section class="module-small bg-dark">
+
+        <div class="container">
+
+            <!-- MODULE TITLE -->
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Contact</h2>
+                </div>
+            </div>
+            <!-- /MODULE TITLE -->
+
+            <div class="row">
+                <ul class="col-sm-12 footer-links ">
+                    <li><a href="https://www.linkedin.com/in/RuichenMeng" target="_blank">Linkedin</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100006582006981" target="_blank">Facebook</a>
+                    </li>
+
+                    <li><a href="mailto:rcmeng93@gmail.com">Email</a></li>
+
+                    <li><a href="assets/Ruichen's%20CV.pdf" target="_blank" class="link-bottom-green">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="module-small bg-dark p-t-30 p-b-30">
+
+        <div class="container">
+
+            <div class="col-sm-12">
+                <p class="copyright text-center m-b-0">© 2016 <a>Ruichen Meng</a>, All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- /FOOTER -->
+
+</div>
+<!-- /WRAPPER -->
+
+<!-- SCROLLTOP -->
+<div class="scroll-up">
+    <a href="#totop"><i class="fa fa-angle-up"></i></a>
+</div>
+
+<!-- Javascript files -->
+
+
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/angular-sanitize.js"></script>
+<!--<script src="assets/js/angular-route.min.js"></script>-->
+<script src="assets/js/app.js"></script>
+
+
+<script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/packery-mode.pkgd.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/jquery.easing.1.3.js"></script>
+<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+<script src="assets/js/smoothscroll.js"></script>
+<script src="assets/js/jquery.shuffleLetters.js"></script>
+<script src="assets/js/zooming.js"></script>
+
+<script src="assets/js/custom.js"></script>
+
+
+<!--Google analysis-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-86088806-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!--
+Disabled JS files:
+
+<script src="assets/js/jqBootstrapValidation.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+
+-->
+
+</body>
+</html>

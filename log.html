@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LogApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="RC">
+
+    <title>Ruichen Meng</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/vertical.css" rel="stylesheet">
+    <!-- Template core CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+
+<body ng-controller="LogCtrl">
+
+<div class="container m-t-60 m-b-80">
+
+
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="module-title font-alt">Revision Log</h2>
+
+        </div>
+    </div>
+
+
+    <div class="m-b-20 row " ng-repeat="l in logData">
+        <div ng-if="l.time">
+            <div class="m-b-10">
+                <h4 class="font-alt col-lg-6 text-left m-b-20">Version: {{l.version}}</h4>
+                <h4 class="font-alt col-lg-6 text-right">Update time: {{l.time}}</h4>
+            </div>
+
+            <p class=" col-lg-12 m-b-10 " ng-repeat="content in l.content">{{content}}</p>
+
+        </div>
+    </div>
+
+
+    <a class="text-center center-block" href="index.html">
+        <img class="dark-logo" src="assets/images/logoRdark.png" width="25" alt="">
+    </a>
+
+</div>
+<!-- Javascript files -->
+
+
+<script src="assets/js/angular.min.js"></script>
+
+<script src="assets/js/jquery-2.1.3.min.js"></script>
+
+<script>
+    var app = angular.module('LogApp', []);
+    app.controller('LogCtrl', function ($scope) {
+        $scope.logData = log;
+    });
+
+    var log = [
+        {
+            version: '0.9.2',
+            time   : '2016-10-30 03:28:56',
+            content: [
+                'Update the font family，switch to proxima-regular, bold and extrabold',
+                'Reduce and optimize the image sizes',
+                'Minimize the Js libraries',
+                'Add this revision log page to control versions better'
+            ]
+        },
+        {
+            version: '0.9.3',
+            time   : '2016-11-02 15:17:41',
+            content: [
+                'Add a coming soon panel',
+                ' ',
+                '']
+        },
+        {
+            version: '1.0.0',
+            time   : '2017-01-19 15:57:17',
+            content: [
+                'Add the Sleepcaster project',
+                'Video module, projects can be attached with demo video now',
+                'Finish some unfinished projects']
+        },
+        {
+            version: '1.0.2',
+            time   : '2017-01-22 21:43:30',
+            content: [
+                'Add a resume link in the footer of the page',
+                'Update the categorization',
+                'Update the summary content']
+        },
+        {
+            version: '1.0.3',
+            time   : '2017-02-01 02:39:16',
+            content: ['Finish 2 projects (rise, warm) and remove 2 poor projects (share, speed)']
+        },
+        {
+            version: '1.0.5',
+            time   : '2017-02-05 13:25:37',
+            content: ['Finish 1 project (Exoskeleton)',
+                'Optimize the display mode. Modules without data will be hidden',
+                'Optimize the coming soon page',
+                'Update the new version of resume']
+        },
+        {
+            version: '1.2.0',
+            time   : '2017-02-18 04:46:33',
+            content: ['Update the resume',
+                'Update the caption text and new text animation!',
+                'Add a demo website link choice. Add a link in the preview attribute then a button will be displayed on the project page.',
+                'Generate a subdomain: preview.ruichen.info. Demo websites can be uploaded to this domain now']
+        },
+        {
+            version: '1.3.0',
+            time   : '2017-02-18 15:40:10',
+            content: ['Optimize the graphic and animation effects',
+                'Images in project pages can be zoomed now',
+                'Remove some useless JS libraries and CSS files']
+        },
+        {
+            version: '1.3.5',
+            time   : '2017-02-19 15:55:17',
+            content: ['Optimize the loading animation']
+        },
+        {
+            version: '1.3.7',
+            time   : '2017-02-21 13:37:59',
+            content: ['Optimize the screen size of demo video. The size can be customized now!',
+                'Text animations are also available on Portfolio pages']
+        },
+        {
+            version: '1.4.0',
+            time   : '2017-08-12 19:21:39',
+            content: ['Add 2 projects: Emotional design lab and painting',
+                'Remove 1 poor project: Fire fighter ectoskeleton',
+                'Optimize the page transition animation by disabling the default clicking event']
+        },
+        {
+            version: '1.4.1',
+            time   : '2017-08-18 14:39:44',
+            content: ['Remove useless JS & CSS files']
+        },
+        {
+            version: '1.5.1',
+            time   : '2017-09-27 21:57:35',
+            content: ['Add one research project: FingerSonar!',
+                'Change the infoviz catagory to research',
+                'Add an max-height option for case study pics. Select different max-height values for tall pics',
+                'Change the layout and sequence of first projects',
+                'Working on the 3d-gg project',
+                'Add ngSanitize module for html binding. Html elements in portfolio.brief can be recognized now.']
+        },
+        {
+            version: '1.5.5',
+            time   : '2017-09-29 15:56:37',
+            content: ['Optimize the font sizes in the frontpage\'s workitems. (Auto adjustable font size feature)',
+                'Add one research project: 3DIGG!',
+                'Use ng-style instead of ng-class to control the max height/width of portfolio pics '
+            ]
+        },
+        {
+            version: '1.5.6',
+            time   : '2017-10-02 22:17:33',
+            content: ['Details improvement.'
+            ]
+        },
+        {
+            version: '1.5.7',
+            time   : '2017-11-15 03:26:23',
+            content: ['Use git for VCS!'
+            ]
+        }
+
+    ]
+
+
+</script>
+
+<!--Google analysis-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-86088806-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
