@@ -34,7 +34,7 @@
 
         setTimeout(function () {
             text2.shuffleLetters({
-                "text": "Learning and discovering the communication between humans and machines.",
+                "text": "Learning and exploring the communication between humanity and machinery.",
                 "fps" : 36
             });
         }, 100);

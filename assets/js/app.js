@@ -62,6 +62,8 @@ RCApp.controller('PoCtrl',
  14.sleepcaster
  15.comming soon
  16.hobbies
+ 17.S health
+ 18.CareerPass
 
 
  */
@@ -70,7 +72,7 @@ RCApp.controller('PoCtrl',
 var portfolios = [
     {
         title          : 'Xiaotao App',
-        time           : '2014 Summer',
+        time           : 'Summer 2014',
         team           : '2 Members Project',
         role           : 'UI/UX Developer',
         simpleDes      : 'Business Innovation Design',
@@ -83,7 +85,7 @@ var portfolios = [
     },
     {
         title          : 'Noisescape',
-        time           : '2014 Summer',
+        time           : 'Summer 2014',
         team           : '4 Members Project',
         role           : 'Hardware/UX Developer',
         simpleDes      : 'Information Design',
@@ -100,7 +102,7 @@ var portfolios = [
     },
     {
         title          : 'Timing Pill Jar',
-        time           : '2015 Spring',
+        time           : 'Spring 2015',
         team           : '4 Members Project',
         role           : 'Product Designer',
         simpleDes      : 'Concept Design',
@@ -113,7 +115,7 @@ var portfolios = [
     },
     {
         title          : 'Projector Corner Mirror',
-        time           : '2015 Summer',
+        time           : 'Summer 2015',
         team           : '4 Members Project',
         role           : 'Product Designer',
         simpleDes      : 'Social Innovation',
@@ -127,8 +129,7 @@ var portfolios = [
     },
     {
         title          : 'Nap Pillow',
-        time           : '2015 ' +
-        '',
+        time           : 'Summer 2015',
         team           : '6 Members Project',
         role           : 'UX/Product Designer',
         simpleDes      : 'Product Design',
@@ -141,7 +142,7 @@ var portfolios = [
     },
     {
         title          : 'LeDrive',
-        time           : '2014 Summer',
+        time           : 'Summer 2014',
         team           : 'Intern Project',
         role           : 'Product Assistant Intern',
         simpleDes      : 'Interaction Design',
@@ -169,7 +170,7 @@ var portfolios = [
     },
     {
         title          : 'Self-Circulate Public Bike System',
-        time           : '2015 Spring',
+        time           : 'Spring 2015',
         team           : '4 Members Project',
         role           : 'Product Designer',
         simpleDes      : 'System Innovation',
@@ -186,7 +187,7 @@ var portfolios = [
 
     {
         title          : 'Warm-light',
-        time           : '2014 Spring',
+        time           : 'Spring 2014',
         team           : '4 Members Project',
         role           : 'Product Designer',
         simpleDes      : 'Concept Design',
@@ -201,7 +202,7 @@ var portfolios = [
     },
     {
         title          : 'Emotional Design Lab',
-        time           : '2017 Spring',
+        time           : 'Spring 2017',
         team           : '2 Members Project',
         role           : 'UX/Web Developer',
         simpleDes      : 'Computing Creativity and Design Cognition',
@@ -216,14 +217,14 @@ var portfolios = [
     },
     {
         title          : 'FingerSonar',
-        time           : '2017 Summer',
+        time           : 'Summer 2017',
         team           : 'Summer Research, Ubicomp Lab',
         role           : 'Designer, Researcher',
         simpleDes      : 'Research',
         theme          : 'dark',
-        brief          : 'Despite years of research and development and substantial progress made, providing appropriate means for input to wearable devices remains a considerable challenge. The size and comfort required for continuous use of a wearable device, as well as the need to operate in mobile contexts with minimal difficulty and attention, make the options of keyboards and touchscreens less desirable. Given this motivation for a convenient and socially appropriate wearable input solution, we introduce FingerSonar, a novel wrist and thumb-mounted sensing solution to enable one handed input.' +
-        '<br/><i>The results of this project have been written and submitted to CHI 2018.<i/>',
-        concept        : 'FingerSonar is a novel sensing technique that can recognize various fine-grained hand poses by analyzing acoustic resonance features. <br/>FingerSonar relies on detecting various hand configurations based on how that configuration impacts the propagation of sound waves injected at the thumb and propagating around the hand. A surface-transducer mounted on a thumb ring injects acoustic chirps to the body. Four receivers distributed on the wrist and thumb collect the chirps. Different hand poses of the hand create distinct paths for the acoustic chirps to travel, creating unique frequency responses at the four receivers.',
+        brief          : 'Providing appropriate means for input to wearable devices remains a considerable challenge. The size and comfort required for continuous use of a wearable device, as well as the need to operate in mobile contexts with minimal difficulty and attention, make the options of keyboards and touchscreens less desirable. Given this motivation for a convenient and socially appropriate wearable input solution, we introduce FingerSonar, a novel wrist and thumb-mounted sensing solution to enable one handed input.' +
+        '<br/><i>The paper of this project is published in 2018 ACM CHI Conference<i/>',
+        concept        : 'FingerSonar is a novel sensing technique that can recognize various fine-grained hand poses by analyzing acoustic resonance features. <br/>FingerSonar relies on detecting various hand configurations based on how that configuration impacts the propagation of sound waves injected at the thumb and propagating around the hand. A surface-transducer mounted on a thumb ring injects acoustic chirps to the body. Four receivers distributed on the wrist and thumb collect the chirps. Thus, the system can detect different hand poses by recognizing unique frequency responses at the four receivers.',
         goal           : '',
         plan           : '',
         pics           : [2, 3],
@@ -238,7 +239,7 @@ var portfolios = [
     },
     {
         title          : '3D interactions on the Google Glass',
-        time           : '2017 Spring',
+        time           : 'Spring 2017',
         team           : '4 Members Project',
         role           : 'Designer, Researcher',
         simpleDes      : 'Research',
@@ -256,7 +257,7 @@ var portfolios = [
 
     {
         title          : 'Rise and Fall',
-        time           : '2014 Summer',
+        time           : 'Summer 2014',
         team           : 'Individual Project',
         role           : 'Product Designer',
         simpleDes      : 'Cultural Innovation',
@@ -270,7 +271,7 @@ var portfolios = [
     },
     {
         title          : 'Ring-toss',
-        time           : '2016 Summer',
+        time           : 'Summer 2016',
         team           : 'Graduation Project',
         role           : 'Product Designer',
         simpleDes      : 'Emotional Design',
@@ -285,7 +286,7 @@ var portfolios = [
     },
     {
         title    : 'Sleepcaster',
-        time     : '2016 Fall',
+        time     : 'Fall 2016',
         team     : '4 Members Project',
         role     : 'UI/UX Designer',
         simpleDes: 'Interaction Design',
@@ -318,9 +319,49 @@ var portfolios = [
         simpleDes      : 'Hobby',
         theme          : 'dark',
         brief          : 'Thanks to painting which I have been insisting on, I learn the significance of passion. Wartercolor and colored pencil are my favorite styles.',
-        pics           : [2, 3, 4, 5],
+        pics           : [2, 3, 4], // [5]
         picsMaxHeight  : 700,
         relatedProjects: [9, 13, 4, 2],
+        video          : 'player.vimeo.com/video/243728215?title=0&byline=0&portrait=0',
+        videoWidth     : 570,
+        videoHeight    : 570,
+        finished       : true
+    },
+    {
+        title          : 'S Health Redesign',
+        time           : 'Spring 2017',
+        team           : 'Individual',
+        role           : 'UX/UI Designer',
+        simpleDes      : 'Application Critique & Re-design',
+        brief          : 'S Health is a personal fitness coach. It sets targets, tracks users everyday activities and reaches new milestones with Goals.\n' +
+        'With intuitive charts and helpful tips, the app will guide users to achieve their health & fitness targets. Stay fit and get healthy with S Health.' +
+        'In the challenge, I critiqued the pros and cons of the features that currently exist and proposed an alternative design.',
+        pics           : [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], // [5]
+        picsMaxHeight  : 700,
+        relatedProjects: [9, 13, 4, 2],
+        video          : 'player.vimeo.com/video/210195221?title=0&byline=0&portrait=0',
+        videoWidth     : 570,
+        videoHeight    : 570,
+        finished       : true
+    },
+    {
+        title          : 'CareerPass',
+        time           : 'Fall 2017',
+        team           : '5 Members Project',
+        role           : 'Designer & Developer',
+        simpleDes      : 'Mobile Application Service Design',
+        theme          : 'dark',
+        brief          : 'We found that students at Georgia Tech need various information of <strong>job seeking</strong>. However, they don’t always easily get the information they want. Sometimes it is because the information is not accessible at that moment and sometimes it results from that they don’t know where or find it hard to get it. So the general objective of our project is to improve college students’ experience in job seeking process.<br><br>',
+        concept       : 'CareerPass is a platform helping students get step into the job market more easily.'
+        + 'It provides users with crowdsourcing information of <strong>the same event that happened last time</strong>, like the career preparation schedule in last semester or hiring information in last year’s career fair.\n',
+
+        pics           : [], // [5]
+        picsMaxHeight  : 700,
+        relatedProjects: [9, 13, 4, 2],
+        video          : 'player.vimeo.com/video/239924687?title=0&byline=0&portrait=0',
+        videoWidth     : 720,
+        videoHeight    : 450,
+        preview        : "http://preview.ruichen.info/career/phone.html",
         finished       : true
     }
 ];

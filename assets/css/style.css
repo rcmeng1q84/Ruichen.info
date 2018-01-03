@@ -2929,3 +2929,9 @@ Multi-columns-row
     text-transform : uppercase;
 
 }
+
+#intro strong{
+    font-family :ProximaNova-Bold;
+    font-weight : normal;
+    color: #1b1b1b;
+}

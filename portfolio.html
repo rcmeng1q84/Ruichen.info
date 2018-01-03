@@ -156,7 +156,7 @@
 
                 <div class="col-md-12" ng-if="!portfolio.goal&&!portfolio.concept">
                     <h5 class="font-alt m-t-0">Brief</h5>
-                    <p>{{portfolio.brief}}</p>
+                    <p ng-bind-html="portfolio.brief"></p>
                 </div>
 
                 <div class="col-md-12" ng-if="portfolio.concept">
